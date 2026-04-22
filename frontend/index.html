@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔍 Acne Detection AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🔍 Acne Detection AI</h1>
+            <p>Upload foto wajah/kulit untuk deteksi tipe jerawat dan rekomendasi treatment</p>
+        </header>
+
+        <!-- Upload Section -->
+        <section class="upload-section">
+            <div class="upload-box" id="dropZone">
+                <input type="file" id="fileInput" accept="image/*" hidden>
+                <div class="upload-content">
+                    <span class="icon">📷</span>
+                    <p>Drag & drop gambar di sini</p>
+                    <p>atau <span class="clickable">klik untuk browse</span></p>
+                    <small>Format: JPG, PNG, JPEG (Max 5MB)</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loading -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>🔍 Menganalisis gambar...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error" class="error hidden">
+            <span class="icon">❌</span>
+            <h3>Prediksi Gagal</h3>
+            <p id="errorMessage"></p>
+            <small id="errorTip"></small>
+        </div>
+
+        <!-- Uncertain Warning -->
+        <div id="uncertain" class="uncertain hidden">
+            <span class="icon">⚠️</span>
+            <h3>Prediksi Tidak Pasti</h3>
+            <p id="uncertainMessage"></p>
+            <div id="uncertainProbs"></div>
+        </div>
+
+        <!-- Result Section -->
+        <section id="result" class="result hidden">
+            <div class="result-header">
+                <span class="badge success">✅ Terdeteksi</span>
+                <h2 id="className">Tipe Jerawat</h2>
+                <div class="confidence">
+                    Confidence: <span id="confidenceValue">0%</span>
+                </div>
+            </div>
+
+            <div class="result-grid">
+                <!-- Gambar -->
+                <div class="card image-card">
+                    <h3>📷 Gambar yang Dianalisis</h3>
+                    <img id="resultImage" src="" alt="Uploaded image">
+                </div>
+
+                <!-- Deskripsi -->
+                <div class="card">
+                    <h3>📝 Deskripsi</h3>
+                    <p id="description"></p>
+                    
+                    <h4>🔬 Penyebab Utama:</h4>
+                    <ul id="causes"></ul>
+                </div>
+
+                <!-- Solusi -->
+                <div class="card">
+                    <h3>💡 Solusi & Treatment</h3>
+                    <ol id="solutions"></ol>
+                    
+                    <h4>🧪 Bahan Aktif Direkomendasikan:</h4>
+                    <p id="ingredients"></p>
+                </div>
+
+                <!-- Produk -->
+                <div class="card products-card">
+                    <h3>🛒 Rekomendasi Produk</h3>
+                    <div id="products"></div>
+                </div>
+
+                <!-- Warning -->
+                <div id="warning" class="card warning-card hidden">
+                    <h3>⚠️ PERINGATAN</h3>
+                    <p id="warningText"></p>
+                </div>
+            </div>
+
+            <!-- Probabilitas -->
+            <div class="card prob-card">
+                <h3>📊 Probabilitas Semua Kelas</h3>
+                <div id="probabilities"></div>
+            </div>
+        </section>
+
+        <!-- Reset Button -->
+        <button id="resetBtn" class="reset-btn hidden">🔄 Analisis Gambar Lain</button>
+
+        <!-- Footer -->
+        <footer>
+            <p>Made with ❤️ | Acne Detection AI © 2024</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
