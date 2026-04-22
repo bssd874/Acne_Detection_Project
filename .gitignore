@@ -1,0 +1,171 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# =========================
+# Virtual Environment
+# =========================
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+log/
+
+# =========================
+# Testing / Coverage
+# =========================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# =========================
+# Type check / lint cache
+# =========================
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.ruff_cache/
+
+# =========================
+# PyInstaller
+# =========================
+*.manifest
+*.spec
+
+# =========================
+# Environment variables / secrets
+# =========================
+.env
+.env.*
+*.env
+
+# =========================
+# Model training outputs
+# =========================
+runs/
+outputs/
+results/
+checkpoints/
+wandb/
+mlruns/
+tensorboard/
+tb_logs/
+
+# =========================
+# Temporary files
+# =========================
+tmp/
+temp/
+*.tmp
+
+# =========================
+# Dataset / large data
+# =========================
+data/
+dataset/
+datasets/
+train/
+valid/
+val/
+test/
+samples/
+exports/
+
+# Kalau kamu tetap mau simpan struktur foldernya,
+# bikin file .gitkeep di dalam folder tersebut
+
+# =========================
+# Images / generated artifacts (optional)
+# =========================
+# Uncomment kalau hasil prediksi/gambar output tidak mau di-push
+# *.png
+# *.jpg
+# *.jpeg
+
+# =========================
+# Archives
+# =========================
+*.rar
+*.7z
+
+# ZIP biasanya masuk Git LFS, jadi JANGAN ignore kalau memang mau di-push pakai LFS
+# *.zip
+
+# =========================
+# Model files
+# =========================
+# File model biasanya masuk Git LFS, jadi jangan di-ignore
+# *.pt
+# *.pth
+# *.onnx
+# *.h5
+# *.keras
+# *.ckpt
+# *.pkl
+# *.joblib
